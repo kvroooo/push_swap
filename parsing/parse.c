@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 13:59:11 by smlamali          #+#    #+#             */
-/*   Updated: 2023/04/29 18:04:12 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/04/29 18:06:53 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_add(char *arg)
 
 int	*ft_parse(char **arg, t_data *pile)
 {
-	 
+	return (0);
 }
 
 int	ft_check(char **arg)
