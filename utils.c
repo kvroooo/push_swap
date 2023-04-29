@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/12 14:09:46 by smlamali          #+#    #+#             */
-/*   Updated: 2022/12/01 15:34:22 by smlamali         ###   ########.fr       */
+/*   Created: 2023/04/29 14:11:59 by smlamali          #+#    #+#             */
+/*   Updated: 2023/04/29 17:50:21 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_error(char *str)
 {
-	int	i;
-
-	i = 0;
-	if (!s)
-		return (0);
-	if (!(ft_isascii(c)))
-		return ((char *)s);
-	while (s[i] && s[i] != c)
-		i++;
-	if (s[i] == c)
-		return ((char *)s + i);
-	return (0);
+	write(1, "Error : ", 9);
+	write(1, str, ft_strlen(str));
+	write(1, "\n", 1);
 }

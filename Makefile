@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/04/22 12:46:07 by smlamali          #+#    #+#              #
-#    Updated: 2023/04/23 17:35:00 by smlamali         ###   ########.fr        #
+#    Created: 2023/04/29 14:12:33 by smlamali          #+#    #+#              #
+#    Updated: 2023/04/29 14:13:26 by smlamali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = 	main.c 					\
-		parsing/parse.c 		\
-		parsing/parse_utils.c 	\
+SRCS =		main.c 			\
+			utils.c 		\
+			parsing/parse.c \
 
 OBJS = $(SRCS:.c=.o)
 
