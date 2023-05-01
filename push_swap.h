@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 13:39:04 by smlamali          #+#    #+#             */
-/*   Updated: 2023/04/29 18:00:42 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/01 18:04:17 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include "printf/ft_printf.h"
 # include "libft/libft.h"
 
 // typedef struct s_pile
@@ -35,8 +36,12 @@ typedef struct s_data
 	int	len_b;
 }	t_data;
 
-int		ft_check(char **arg);
+//UTILS
 void	ft_error(char *str);
-int		*ft_parse(char **arg, t_data *pile);
+
+//PARSING
+void	ft_parse(char **arg, t_data *data);
+int		ft_check(char **arg, t_data *data);
+int		ft_occurence(t_data *data);
 
 #endif

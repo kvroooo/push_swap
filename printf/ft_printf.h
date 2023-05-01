@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 14:31:35 by smlamali          #+#    #+#             */
-/*   Updated: 2022/12/15 13:19:34 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/01 14:22:46 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <stdarg.h>
+# include "../libft/libft.h"
 
 int		ft_printf(const char *str, ...);
-int		ft_strlen(const char *s);
 int		ft_putnbr(int nbr);
 int		ft_putchar(char c);
 int		ft_putstr(const char *str);

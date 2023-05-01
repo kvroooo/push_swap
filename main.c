@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 12:22:52 by smlamali          #+#    #+#             */
-/*   Updated: 2023/04/29 18:04:01 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/01 14:43:47 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	main(int argc, char *argv[])
 
 	if (argc == 1)
 		return (0);
-	data.a = ft_parse(argv, &data);
-	if (data.a == 0)
-		return (ft_error("retry with a good list plz ^^"), 0);
+	if (ft_check(argv, &data))
+		return (ft_error("syntaxe :/"), 0);
+	free(data.a);
 }
 
 // if (ft_check(argv) != 0)
