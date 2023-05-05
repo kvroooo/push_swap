@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 19:10:43 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/05 14:01:17 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/05 19:28:35 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	ft_rra(t_data *data)
 {
 	int	i;
 	int	tmp;
-	
+
 	i = data->len - 1;
 	tmp = data->a[i];
 	while (i > 0)
@@ -61,5 +61,22 @@ void	ft_rra(t_data *data)
 	}
 	data->a[0] = tmp;
 	printf("rra\n");
+	return ;
+}
+
+void	ft_pb(t_data *data)
+{
+	int	i;
+	int	tmp;
+	int	*new_a;
+
+	i = 1;
+	tmp = data->a[0];
+	data->len_a = data->len - 1;
+	new_a = malloc(sizeof(int *) * data->len_a);
+	while (i < data->len)
+	{
+		
+	}
 	return ;
 }

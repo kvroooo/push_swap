@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 20:46:40 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/05 15:37:21 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/05 18:51:54 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void	smoll_sort(t_data *data)
 
 void	five_sort(t_data *data)
 {
+	
 	return ;
 }
 
