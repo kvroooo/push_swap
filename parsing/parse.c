@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 13:59:11 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/01 18:07:26 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/02 17:53:12 by kuro             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	ft_occurence(t_data *data)
 
 	i = 0;
 	j = 0;
+	if (!data->a)
+		return (1);
 	while (i < data->len)
 	{
 		tmp = data->a[i];
@@ -27,9 +29,10 @@ int	ft_occurence(t_data *data)
 		{
 			if (j == i)
 				j += 1;
-			if (tmp == data->a[j])
+			else if (data->a[j] && tmp == data->a[j])
 				return (1);
-			j++;
+			else
+				j++;
 		}
 		i++;
 		j = 0;
@@ -42,16 +45,12 @@ void	ft_parse(char **arg, t_data *data)
 	int	i;
 	int	j;
 	int	nbr;
-	int	*tab;
 
 	i = 1;
 	j = 0;
 	data->a = malloc(sizeof(int *) * data->len);
 	if (!data->a)
-	{
-		free(tab);
 		return ;
-	}
 	while (arg[i])
 	{
 		nbr = ft_atoi(arg[i]);
@@ -85,7 +84,7 @@ int	ft_check(char **arg, t_data *data)
 	}
 	printf("len : %d\n\n", data->len);
 	ft_parse(arg, data);
-	if (!ft_occurence(data))
+	if (ft_occurence(data) != 0)
 		return (1);
 	return (0);
 }

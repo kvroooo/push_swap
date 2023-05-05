@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 12:22:52 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/01 14:43:47 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/04 18:33:24 by kuro             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 int	main(int argc, char *argv[])
 {
 	static t_data	data = {0};
+	int	i;
 
+	i = 0;
 	if (argc == 1)
 		return (0);
-	if (ft_check(argv, &data))
+	if (ft_check(argv, &data) != 0)
 		return (ft_error("syntaxe :/"), 0);
+	while (i < data.len)
+		printf("[%d]", data.a[i++]);
+	//LISTE 3 NBR
+	tri_three(&data);
 	free(data.a);
 }
-
-// if (ft_check(argv) != 0)
-	// {
-	// 	ft_error("retry with good number pls :C");
-	// 	return (0);
-	// }

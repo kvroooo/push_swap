@@ -3,15 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+         #
+#    By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/29 14:12:33 by smlamali          #+#    #+#              #
-#    Updated: 2023/05/01 14:27:20 by smlamali         ###   ########.fr        #
+#    Updated: 2023/05/02 22:28:33 by kuro             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS =		main.c 					\
 			utils.c 				\
+			ft_tri.c 				\
+			actions/instructions.c 	\
 			parsing/parse.c 		\
 			printf/ft_printf.c 		\
 			printf/ft_putadd.c 		\

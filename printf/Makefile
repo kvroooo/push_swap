@@ -3,22 +3,22 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+         #
+#    By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 15:58:08 by smlamali          #+#    #+#              #
-#    Updated: 2022/12/15 12:41:53 by smlamali         ###   ########.fr        #
+#    Updated: 2023/05/02 22:27:13 by kuro             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS=	ft_printf.c		\
-		ft_putchar.c	\
-		ft_putstr.c		\
-		ft_strlen.c		\
-		ft_putnbr.c		\
-		ft_putunbr.c	\
-		ft_puthex_min.c	\
-		ft_puthex_maj.c	\
-		ft_putadd.c		\
+SRCS=	ft_printf.c				\
+		ft_putchar.c			\
+		ft_putstr.c				\
+		ft_strlen.c				\
+		ft_putnbr.c				\
+		ft_putunbr.c			\
+		ft_puthex_min.c			\
+		ft_puthex_maj.c			\
+		ft_putadd.c				\
 
 OBJS= $(SRCS:.c=.o)
 

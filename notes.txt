@@ -1,0 +1,15 @@
+TRI 3 NOMBRES /
+
+Cas 1 / 2 1 3 => sa ---------- OK
+Cas 2 / 3 2 1 => sa + rra ---- OK
+Cas 3 / 2 3 1 => rra ---------TO DO
+Cas 4 / 3 1 2 => ra ---------- OK
+Cas 5 / 1 3 2 => sa + ra ----- OK
+
+ra -> decalage vers le haut
+rra -> deecalage vers le bas
+
+2 1 3 -> a > b ET b < c
+3 1 2 -> a > c ET b < c
+3 2 1 -> a > c ET b > c
+2 3 1 -> a < b ET b > c
