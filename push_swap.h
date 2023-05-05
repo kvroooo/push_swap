@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 13:39:04 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/04 18:38:17 by kuro             ###   ########.fr       */
+/*   Updated: 2023/05/05 14:30:50 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ typedef struct s_data
 {
 	int	*a;
 	int	*b;
-	int	index;
 	int	len;
 	int	len_a;
 	int	len_b;
@@ -45,7 +44,9 @@ int		ft_check(char **arg, t_data *data);
 int		ft_occurence(t_data *data);
 
 //ALGO TRI
-void    tri_three(t_data *data);
+void	smoll_sort(t_data *data);
+//void	sort_three(t_data *data);
+int		is_sorted(t_data *data);
 
 //INSTRUCTIONS
 void	ft_sa(t_data *data);

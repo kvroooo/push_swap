@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 12:22:52 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/04 18:33:24 by kuro             ###   ########.fr       */
+/*   Updated: 2023/05/05 14:52:56 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(int argc, char *argv[])
 {
 	static t_data	data = {0};
-	int	i;
+	int				i;
 
 	i = 0;
 	if (argc == 1)
@@ -24,7 +24,7 @@ int	main(int argc, char *argv[])
 		return (ft_error("syntaxe :/"), 0);
 	while (i < data.len)
 		printf("[%d]", data.a[i++]);
-	//LISTE 3 NBR
-	tri_three(&data);
+	smoll_sort(&data);
+	printf("\n------ END ------\n");
 	free(data.a);
 }

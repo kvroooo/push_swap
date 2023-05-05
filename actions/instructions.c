@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   instructions.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 19:10:43 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/04 20:48:46 by kuro             ###   ########.fr       */
+/*   Updated: 2023/05/05 14:01:17 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_ra(t_data *data)
 {
 	int	i;
 	int	tmp;
-	
+
 	i = 0;
 	tmp = data->a[0];
 	while (i < data->len - 1)
