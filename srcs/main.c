@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:15:39 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/08 17:31:27 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/08 19:09:45 by kuro             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,6 @@ int	main(int argc, char *argv[])
 	printf("[%d] ", pile->a->nbr);
 	printf("\n");
 	printf("------ END ------\n");
+	free_data(pile->a);
+	free(pile);
 }

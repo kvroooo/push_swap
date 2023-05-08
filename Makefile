@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+         #
+#    By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/07 16:39:50 by kuro              #+#    #+#              #
-#    Updated: 2023/05/08 17:04:42 by smlamali         ###   ########.fr        #
+#    Updated: 2023/05/08 19:04:41 by kuro             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ SRCS =		srcs/main.c 		\
 			srcs/parse.c 		\
 			srcs/utils.c		\
 			srcs/lst_utils.c 	\
+			srcs/ft_lst.c 		\
 
 OBJS = $(SRCS:.c=.o)
 

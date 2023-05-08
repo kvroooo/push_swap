@@ -3,40 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:36:25 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/08 18:00:17 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/08 22:16:10 by kuro             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-t_data	*ft_parse(char **arg)
+t_data *ft_parse(char **arg)
 {
-	int		i;
-	int		nbr;
-	t_data	*new;
+	int i;
+	int nbr;
+	t_data *nvx;
 
 	i = 1;
-	new = l_new_data();
-	if (!new)
+	nvx = l_new_data();
+	if (!nvx)
 		return (NULL);
 	nbr = ft_atoi(arg[i++]);
-	new->nbr = nbr;
+	nvx->nbr = nbr;
 	while (arg[i])
 	{
 		nbr = ft_atoi(arg[i]);
-		new->next = l_add_data(new, nbr);
+		nvx->next = l_add_data(nvx, nbr);
 		i++;
 	}
-	return (new);
+	return (nvx);
 }
 
-int	ft_check(char **arg, t_pile *pile)
+int ft_check(char **arg, t_pile *pile)
 {
-	int	i;
-	int	j;
+	int i;
+	int j;
 
 	i = 1;
 	j = 0;
