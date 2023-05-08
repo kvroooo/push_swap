@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/29 14:11:59 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/01 14:42:36 by smlamali         ###   ########.fr       */
+/*   Created: 2023/05/08 13:17:10 by smlamali          #+#    #+#             */
+/*   Updated: 2023/05/08 17:06:46 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	ft_error(char *str)
 {

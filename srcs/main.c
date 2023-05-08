@@ -5,26 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/22 12:22:52 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/05 14:52:56 by smlamali         ###   ########.fr       */
+/*   Created: 2023/05/07 18:15:39 by kuro              #+#    #+#             */
+/*   Updated: 2023/05/08 17:31:27 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	main(int argc, char *argv[])
 {
-	static t_data	data = {0};
-	int				i;
+	t_pile	*pile;
 
-	i = 0;
+	pile = l_new_pil();
 	if (argc == 1)
-		return (0);
-	if (ft_check(argv, &data) != 0)
-		return (ft_error("syntaxe :/"), 0);
-	while (i < data.len)
-		printf("[%d]", data.a[i++]);
-	smoll_sort(&data);
-	printf("\n------ END ------\n");
-	free(data.a);
+		return (ft_error("no arg"), 0);
+	printf("------ MAIN ------\n");
+	if (!ft_check(argv, pile))
+		return (ft_error("check said no"), 0);
+	pile->a = ft_parse(argv);
+	if (pile->a == NULL)
+		return (ft_error("flop"), 0);
+	printf("[%d] ", pile->a->nbr);
+	printf("\n");
+	printf("------ END ------\n");
 }

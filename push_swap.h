@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/29 13:39:04 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/05 14:30:50 by smlamali         ###   ########.fr       */
+/*   Created: 2023/05/07 16:40:06 by kuro              #+#    #+#             */
+/*   Updated: 2023/05/08 17:23:50 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,43 +14,41 @@
 # define PUSH_SWAP_H
 
 # include <stdio.h>
-# include <stdlib.h>
 # include <unistd.h>
-# include "printf/ft_printf.h"
+# include <stdlib.h>
+# include "printf.h"
 # include "libft/libft.h"
-
-// typedef struct s_pile
-// {
-// 	int		nb;
-// 	int		index;
-// 	s_pile	*next;	
-// }	t_pile;
 
 typedef struct s_data
 {
-	int	*a;
-	int	*b;
-	int	len;
-	int	len_a;
-	int	len_b;
-}	t_data;
+	int				nbr;
+	int				pos;
+	int				index;
 
-//UTILS
+	struct s_data	*next;
+	struct s_data	*prev;
+}			t_data;
+
+typedef struct s_pile
+{
+	int		len;
+	int		len_a;
+	int		len_b;
+
+	t_data	*a;
+	t_data	*b;
+}			t_pile;
+
+// ------ UTILS ------
 void	ft_error(char *str);
 
-//PARSING
-void	ft_parse(char **arg, t_data *data);
-int		ft_check(char **arg, t_data *data);
-int		ft_occurence(t_data *data);
+// ------ STRUCT ------
+t_data	*l_new_data(void);
+t_pile	*l_new_pil(void);
+t_data	*l_add_data(t_data *data, int nb);
 
-//ALGO TRI
-void	smoll_sort(t_data *data);
-//void	sort_three(t_data *data);
-int		is_sorted(t_data *data);
-
-//INSTRUCTIONS
-void	ft_sa(t_data *data);
-void	ft_ra(t_data *data);
-void	ft_rra(t_data *data);
+// ------ PARSING ------
+int		ft_check(char **argv, t_pile *pile);
+t_data	*ft_parse(char **arg);
 
 #endif

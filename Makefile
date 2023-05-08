@@ -3,48 +3,38 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+         #
+#    By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/04/29 14:12:33 by smlamali          #+#    #+#              #
-#    Updated: 2023/05/02 22:28:33 by kuro             ###   ########.fr        #
+#    Created: 2023/05/07 16:39:50 by kuro              #+#    #+#              #
+#    Updated: 2023/05/08 17:04:42 by smlamali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =		main.c 					\
-			utils.c 				\
-			ft_tri.c 				\
-			actions/instructions.c 	\
-			parsing/parse.c 		\
-			printf/ft_printf.c 		\
-			printf/ft_putadd.c 		\
-			printf/ft_putchar.c		\
-			printf/ft_puthex_maj.c	\
-			printf/ft_puthex_min.c 	\
-			printf/ft_putnbr.c 		\
-			printf/ft_putunbr.c 	\
-			printf/ft_putstr.c 		\
+SRCS =		srcs/main.c 		\
+			srcs/parse.c 		\
+			srcs/utils.c		\
+			srcs/lst_utils.c 	\
 
 OBJS = $(SRCS:.c=.o)
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -g3
-
+CFLAGS = -Wall -Werror -Wextra -g
 
 NAME = push_swap
 
-all: $(NAME)
+all : $(NAME)
 
-.c.o:
+.c.o :
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	$(CC) $(OBJS) -L./libft -lft -o $(NAME)
 
 clean:
-	rm -f ${OBJS}
+	rm -f $(OBJS)
 
-fclean : clean
-	rm -f ${NAME}
+fclean: clean
+	rm -f $(NAME)
 
 re: fclean all
