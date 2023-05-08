@@ -24,3 +24,9 @@ Pour une pile de :
 | 8,5k          | 3        | 
 | 10k           | 2        |
 | 11,5K         | 1        |
+
+<h3><b>Run</b></h3>
+$make<br>
+$./push_swap [insert liste d'arguments]<br>
+OU<br>
+$valgrind --leak-check=full ./push_swap [insert liste d'arguments]<br>
