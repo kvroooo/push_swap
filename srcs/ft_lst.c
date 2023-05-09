@@ -6,31 +6,11 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:38:10 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/09 16:17:26 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/09 17:32:53 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
-// create a new data struct
-// and initialise everything to null
-// t_data	*l_new_data(void)
-// {
-// 	t_data	*new;
-
-// 	new = malloc(sizeof(t_data));
-// 	if (!new)
-// 	{
-// 		free(new);
-// 		return (NULL);
-// 	}
-// 	new->nbr = 0;
-// 	new->pos = 0;
-// 	new->index = 0;
-// 	new->prev = NULL;
-// 	new->next = NULL;
-// 	return (new);
-// }
 
 //create cell
 // and insert nb
@@ -108,18 +88,3 @@ t_pile	*l_new_pil(void)
 	new->b = NULL;
 	return (new);
 }
-
-//create a new data struct initialised to 0
-//insert the nbr and give it to te next pointer of *data
-// t_data	*l_add_data(t_data *data, int nb)
-// {
-// 	t_data	*cell;
-
-// 	cell = l_new_data();
-// 	if (!cell)
-// 		return (NULL);
-// 	cell->nbr = nb;
-// 	cell->prev = data;
-// 	cell->next = NULL;
-// 	return (cell);
-// }

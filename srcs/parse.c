@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:36:25 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/09 16:27:18 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/09 17:46:52 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,36 @@ void	ft_parse(char **arg, t_pile *pile)
 		j++;
 	}
 	return ;
+}
+
+int	ft_occ(t_pile *pile)
+{
+	int		i;
+	int		j;
+	int		nb;
+	t_data	*tmp;
+
+	i = 0;
+	j = 0;
+	tmp = pile->a;
+	while (tmp)
+	{
+		nb = tmp->nbr;
+		while (tmp)
+		{
+			if (i == j)
+				tmp->next;
+			j++;
+			if (nb == tmp->nbr)
+				return (1);
+			j++;
+			tmp = tmp->next;
+		}
+		j = 0;
+		i++;
+		tmp = pile->a->next;
+	}
+	return (0);
 }
 
 int	ft_check(char **arg, t_pile *pile)
