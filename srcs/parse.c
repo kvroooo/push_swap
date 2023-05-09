@@ -3,40 +3,45 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:36:25 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/08 22:16:10 by kuro             ###   ########.fr       */
+/*   Updated: 2023/05/09 16:27:18 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-t_data *ft_parse(char **arg)
+//parse argv 
+//transform each element of argv into int
+//assign it to pile->a
+void	ft_parse(char **arg, t_pile *pile)
 {
-	int i;
-	int nbr;
-	t_data *nvx;
+	int		i;
+	int		j;
+	int		nbr;
 
 	i = 1;
-	nvx = l_new_data();
-	if (!nvx)
-		return (NULL);
-	nbr = ft_atoi(arg[i++]);
-	nvx->nbr = nbr;
+	j = 0;
 	while (arg[i])
 	{
 		nbr = ft_atoi(arg[i]);
-		nvx->next = l_add_data(nvx, nbr);
+		pile->a = add_at(pile->a, nbr, j);
+		if (!pile->a)
+		{
+			free_data(pile->a);
+			return ;
+		}
 		i++;
+		j++;
 	}
-	return (nvx);
+	return ;
 }
 
-int ft_check(char **arg, t_pile *pile)
+int	ft_check(char **arg, t_pile *pile)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 1;
 	j = 0;

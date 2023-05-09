@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lst.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:38:10 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/08 22:17:45 by kuro             ###   ########.fr       */
+/*   Updated: 2023/05/09 16:17:26 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,79 @@
 
 // create a new data struct
 // and initialise everything to null
-t_data	*l_new_data(void)
-{
-	t_data	*new;
+// t_data	*l_new_data(void)
+// {
+// 	t_data	*new;
 
-	new = malloc(sizeof(t_data) * 1);
-	if (!new)
+// 	new = malloc(sizeof(t_data));
+// 	if (!new)
+// 	{
+// 		free(new);
+// 		return (NULL);
+// 	}
+// 	new->nbr = 0;
+// 	new->pos = 0;
+// 	new->index = 0;
+// 	new->prev = NULL;
+// 	new->next = NULL;
+// 	return (new);
+// }
+
+//create cell
+// and insert nb
+t_data	*create_cell(int nbr)
+{
+	t_data	*tmp;
+
+	tmp = malloc(sizeof(t_data));
+	if (!tmp)
 	{
-		free(new);
+		free(tmp);
 		return (NULL);
 	}
-	new->nbr = 0;
-	new->pos = 0;
-	new->index = 0;
-	new->prev = NULL;
-	new->next = NULL;
-	return (new);
+	tmp->nbr = nbr;
+	tmp->next = NULL;
+	return (tmp);
 }
 
-//create a new data struct initialised to 0
-//insert the nbr and give it to te next pointer of *data
-t_data	*l_add_data(t_data *data, int nb)
+//add at position, data
+t_data	*add_at(t_data *data, int nb, int pos)
 {
-	t_data	*new;
+	int		i;
+	t_data	*prev;
+	t_data	*current;
+	t_data	*cell;
 
-	new = l_new_data();
-	if (!new)
+	i = 0;
+	prev = data;
+	current = data;
+	cell = create_cell(nb);
+	if (!cell)
 		return (NULL);
-	new->nbr = nb;
-	data->prev = data;
-	data->next = NULL;
-	return (new);
+	if (pos == 0)
+	{
+		cell->next = data;
+		return (cell);
+	}
+	while (i < pos)
+	{
+		prev = current;
+		current = current->next;
+		i++;
+	}
+	prev->next = cell;
+	cell->next = current;
+	return (data);
+}
+
+void	print_list(t_data *data)
+{
+	while (data)
+	{
+		printf("[%d] ", data->nbr);
+		data = data->next;
+	}
+	printf("\n");
 }
 
 //Create a new pile struct
@@ -53,7 +95,7 @@ t_pile	*l_new_pil(void)
 {
 	t_pile	*new;
 
-	new = malloc(sizeof(t_pile) * 1);
+	new = malloc(sizeof(t_pile));
 	if (!new)
 	{
 		free(new);
@@ -66,3 +108,18 @@ t_pile	*l_new_pil(void)
 	new->b = NULL;
 	return (new);
 }
+
+//create a new data struct initialised to 0
+//insert the nbr and give it to te next pointer of *data
+// t_data	*l_add_data(t_data *data, int nb)
+// {
+// 	t_data	*cell;
+
+// 	cell = l_new_data();
+// 	if (!cell)
+// 		return (NULL);
+// 	cell->nbr = nb;
+// 	cell->prev = data;
+// 	cell->next = NULL;
+// 	return (cell);
+// }
