@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:38:10 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/09 17:32:53 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/15 12:56:39 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,10 @@ void	print_list(t_data *data)
 {
 	while (data)
 	{
-		printf("[%d] ", data->nbr);
+		printf("[%d]->", data->nbr);
 		data = data->next;
 	}
+	printf("%p", data);
 	printf("\n");
 }
 

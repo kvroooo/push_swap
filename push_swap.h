@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:40:06 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/09 16:27:21 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/15 14:05:42 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,6 @@ t_data	*create_cell(int nbr);
 // ------ PARSING ------
 int		ft_check(char **argv, t_pile *pile);
 void	ft_parse(char **arg, t_pile *pile);
+int		ft_occ(int nb, t_data *data);
 
 #endif

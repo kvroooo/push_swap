@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lst_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:33:48 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/08 19:03:16 by kuro             ###   ########.fr       */
+/*   Updated: 2023/05/15 12:53:59 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ t_data	*free_at(t_data *data, int pos)
 
 t_data	*free_data(t_data *data)
 {
-	t_data *tmp;
-	
+	t_data	*tmp;
+
 	tmp = NULL;
 	while (data)
 	{
@@ -51,6 +51,7 @@ t_data	*free_data(t_data *data)
 	}
 	return (data);
 }
+
 /*
 t_pile	*free_pile(t_pile *pile)
 {
