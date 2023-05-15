@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/08 13:17:10 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/15 17:22:38 by smlamali         ###   ########.fr       */
+/*   Created: 2022/12/02 15:52:36 by smlamali          #+#    #+#             */
+/*   Updated: 2023/05/15 17:19:29 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "ft_printf.h"
 
-void	ft_error(char *str)
-{
-	write(1, "Error : ", 9);
-	write(1, str, ft_strlen(str));
-	write(1, "\n", 1);
-}
+// int	ft_strlen(const char *s)
+// {
+// 	int	i;
 
-void	print_list(t_data *data)
-{
-	while (data)
-	{
-		ft_printf("[%d]->", data->nbr);
-		data = data->next;
-	}
-	ft_printf("%p", data);
-	ft_printf("\n");
-}
+// 	i = 0;
+// 	while (s[i])
+// 		i++;
+// 	return (i);
+// }

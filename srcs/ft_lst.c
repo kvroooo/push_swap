@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:38:10 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/15 12:56:39 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/15 17:21:25 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,17 +57,6 @@ t_data	*add_at(t_data *data, int nb, int pos)
 	prev->next = cell;
 	cell->next = current;
 	return (data);
-}
-
-void	print_list(t_data *data)
-{
-	while (data)
-	{
-		printf("[%d]->", data->nbr);
-		data = data->next;
-	}
-	printf("%p", data);
-	printf("\n");
 }
 
 //Create a new pile struct
