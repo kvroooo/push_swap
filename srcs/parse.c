@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:36:25 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/15 14:19:37 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/16 13:54:47 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,13 @@ int	ft_check(char **arg, t_pile *pile)
 
 	i = 1;
 	j = 0;
+	if (!arg[i][j])
+		return (0);
 	while (arg[i])
 	{
 		while (arg[i][j])
 		{
-			if (arg[i][j] == '-' && arg[i][j + 1] == 0)
+			if ((arg[i][j] == '-' && arg[i][j + 1] == 0) || (arg[i][j] == ' '))
 				return (0);
 			if (arg[i][j] == '+' && arg[i][j + 1] == 0)
 				return (0);
