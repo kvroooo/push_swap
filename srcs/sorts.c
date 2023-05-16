@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:49:05 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/15 16:41:20 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/16 15:52:15 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,16 @@ int	is_sorted(t_data *data)
 	return (1);
 }
 
-// void	smoll_sort(t_data *data)
-// {
-// 	if (is_sorted(data))
-// }
+void	smoll_sort(t_data *data)
+{
+	if (is_sorted(data))
+		ft_printf("sorted !\n");
+	while (!is_sorted(data))
+	{
+		if (data->nbr > data->next->nbr)
+			ft_sa(data);
+		else
+			ft_rra(data);
+	}
+	return ;
+}
