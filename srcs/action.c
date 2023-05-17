@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:42:02 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/16 17:42:26 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/17 17:52:40 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,20 @@ void	ft_sa(t_data *data)
 
 //Move everything down
 //the last come first
+//Gerer si un element dans la liste
 void	ft_rra(t_pile *pile)
 {
 	int		i;
-	int		nb;
 	t_data	*tmp;
 
-	if (!pile)
-		return ;
-	tmp = pile;
-	i = pile->len;
-	while (i > 0)
-	{
-		
-	}
+	i = 0;
+	tmp = pile->a;
+	while (tmp && tmp->next)
+		tmp = tmp->next;
+	printf("prev %p\n", tmp->prev);
+	tmp->prev = NULL;
+	tmp->next = pile->a;
+	while (i++ < pile->len - 1)
+		tmp = tmp->next;
+	tmp->next = NULL;
 }

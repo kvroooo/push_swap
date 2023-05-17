@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:40:06 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/16 16:29:54 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/17 13:46:43 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ typedef struct s_pile
 void	ft_error(char *str);
 t_data	*free_data(t_data *data);
 t_data	*get_pos(t_data *data, int pos);
+int		get_val_at(t_data *data, int pos);
 
 // -_-_-_-_-_-  FT_LIST -_-_-_-_-_- 
 t_data	*add_at(t_data *data, int nb, int pos);
@@ -58,9 +59,10 @@ int		ft_occ(int nb, t_data *data);
 
 // -_-_-_-_-_-  SORT -_-_-_-_-_- 
 int		is_sorted(t_data *data);
-void	smoll_sort(t_data *data);
+void	smoll_sort(t_pile *pile);
 
 // -_-_-_-_-_- INSTRUCTIONS  -_-_-_-_-_-
 void	ft_sa(t_data *data);
+void	ft_rra(t_pile *pile);
 
 #endif
