@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:33:48 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/16 17:23:30 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/18 15:02:45 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ t_data	*free_at(t_data *data, int pos)
 	}
 	prev->next = current->next;
 	free(current);
-	return (NULL);
+	return (data);
 }
 
 t_data	*free_data(t_data *data)

@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:40:06 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/17 13:46:43 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/18 15:39:29 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ typedef struct s_data
 	int				index;
 
 	struct s_data	*next;
-	struct s_data	*prev;
 }	t_data;
 
 typedef struct s_pile
@@ -42,6 +41,7 @@ typedef struct s_pile
 // -_-_-_-_-_- UTILS -_-_-_-_-_- 
 void	ft_error(char *str);
 t_data	*free_data(t_data *data);
+t_data	*free_at(t_data *data, int pos);
 t_data	*get_pos(t_data *data, int pos);
 int		get_val_at(t_data *data, int pos);
 
