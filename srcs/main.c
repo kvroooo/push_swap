@@ -6,13 +6,18 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:15:39 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/18 15:37:09 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/18 17:20:29 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
 // TO DO : REMPLACER LES PRINTF PAR FT_PRINTF !!!
+// TO DO : fonction qui set index des nombres 
+// 			et leur position dans le tableau a chaque mvmt !
+// TO DO : pour rra essayer de faire un setAt
+//			pour ajouter un element de structure en entier, plutot que nb
+
 int	main(int argc, char *argv[])
 {
 	t_pile	*pile;
@@ -28,7 +33,7 @@ int	main(int argc, char *argv[])
 		return (ft_error("pile null"), 0);
 	ft_printf("len: %d\n", pile->len);
 	print_list(pile->a);
-	ft_rra(pile);
+	smoll_sort(pile);
 	print_list(pile->a);
 	ft_printf("------ END ------\n");
 	free_data(pile->a);

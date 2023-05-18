@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:49:05 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/17 14:03:44 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/18 17:19:33 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,8 @@ void	smoll_sort(t_pile *pile)
 	{
 		if (pile->a->nbr > pile->a->next->nbr)
 			ft_sa(pile->a);
+		else
+			ft_rra(pile);
 	}
 	return ;
 }
-
-// 	else
-	// 	{
-	// 		ft_printf("HERE\n");
-	// 		ft_rra(pile);
-	// 	}
-	// 	print_list(pile->a);
-	// }
