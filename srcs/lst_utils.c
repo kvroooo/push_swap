@@ -6,11 +6,29 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:33:48 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/18 15:02:45 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/23 17:50:51 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+//On se pose sur l'avant dernier element de la liste
+//On save l'element suivant pour le free a la fin
+//Pointe avant dernier element vers NULL !!1! 
+t_pile	*free_last(t_pile *pile)
+{
+	t_data	*tmp;
+	t_data	*last;
+
+	tmp = pile->a;
+	while (tmp && tmp->next->next)
+		tmp = tmp->next;
+	last = tmp->next;
+	tmp->next = NULL;
+	free(last);
+	pile->len -= 1;
+	return (pile);
+}
 
 t_data	*free_at(t_data *data, int pos)
 {
@@ -33,6 +51,8 @@ t_data	*free_at(t_data *data, int pos)
 		current = current->next;
 		i++;
 	}
+	if (!current)
+		return (data);
 	prev->next = current->next;
 	free(current);
 	return (data);

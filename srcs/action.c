@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:42:02 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/23 14:02:46 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/23 17:45:16 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ void	ft_rra(t_pile *pile)
 	tmp = pile->a;
 	while (tmp && tmp->next)
 		tmp = tmp->next;
-	pile->a = free_at(pile->a, pile->len - 1);
-	add_front(pile->a, tmp);
+	pile = free_last(pile);
+	add_front(&pile->a, tmp);
 	ft_printf("rra\n");
 	return ;
 }
