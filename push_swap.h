@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:40:06 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/18 15:39:29 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/23 14:04:34 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int		get_val_at(t_data *data, int pos);
 
 // -_-_-_-_-_-  FT_LIST -_-_-_-_-_- 
 t_data	*add_at(t_data *data, int nb, int pos);
+void	add_front(t_data *lst, t_data *new);
 void	print_list(t_data *data);
 t_data	*create_cell(int nbr);
 t_pile	*l_new_pil(void);

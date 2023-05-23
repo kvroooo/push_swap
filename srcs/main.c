@@ -6,13 +6,12 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:15:39 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/18 17:59:20 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/22 14:11:50 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-// TO DO : REMPLACER LES PRINTF PAR FT_PRINTF !!!
 // TO DO : fonction qui set index des nombres 
 // 			et leur position dans le tableau a chaque mvmt !
 // TO DO : pour rra essayer de faire un setAt

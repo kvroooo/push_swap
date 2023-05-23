@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:38:10 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/18 17:57:50 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/23 14:09:44 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,25 +31,11 @@ t_data	*create_cell(int nbr)
 	return (tmp);
 }
 
-// t_data	*set_at(t_data *get_data, t_data *set_data, int pos)
-// {
-// 	int		i;
-// 	t_data	*prev;
-// 	t_data	*next;
-// 	t_data	*current;
-
-// 	i = 0;
-// 	prev = data;
-// 	current = set_data;
-// 	if (!data)
-// 		return (NULL);
-// 	if (pos == 0)
-// 	{
-// 		current->next = get_data;
-// 		return (current);
-// 	}
-// 	return (NULL);
-// }
+void	add_front(t_data *lst, t_data *new)
+{
+	new->next = lst;
+	lst = new;
+}
 
 //add at position, data
 t_data	*add_at(t_data *data, int nb, int pos)
