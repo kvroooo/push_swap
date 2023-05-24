@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:33:48 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/23 17:50:51 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/24 14:29:04 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,18 @@
 //On se pose sur l'avant dernier element de la liste
 //On save l'element suivant pour le free a la fin
 //Pointe avant dernier element vers NULL !!1! 
-t_pile	*free_last(t_pile *pile)
+t_data	*free_last(t_data *data)
 {
 	t_data	*tmp;
 	t_data	*last;
 
-	tmp = pile->a;
+	tmp = data;
 	while (tmp && tmp->next->next)
 		tmp = tmp->next;
 	last = tmp->next;
 	tmp->next = NULL;
 	free(last);
-	pile->len -= 1;
-	return (pile);
+	return (data);
 }
 
 t_data	*free_at(t_data *data, int pos)
