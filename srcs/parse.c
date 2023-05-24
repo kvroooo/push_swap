@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:36:25 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/24 16:06:01 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:05:28 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,7 @@ int	ft_parse(char **arg, t_pile *pile)
 	{
 		nbr = ft_atoi(arg[i]);
 		if (ft_occ(nbr, pile->a) == 1)
-		{
-			printf("BYE !\n");
 			return (0);
-		}
 		pile->a = add_at(pile->a, nbr, j);
 		if (!pile->a)
 		{
@@ -40,6 +37,7 @@ int	ft_parse(char **arg, t_pile *pile)
 		i++;
 		j++;
 	}
+	set_position(pile->a);
 	return (1);
 }
 

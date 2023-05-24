@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:40:06 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/24 15:55:26 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:05:06 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,17 @@ typedef struct s_pile
 }	t_pile;
 
 // -_-_-_-_-_- UTILS -_-_-_-_-_- 
+void	mr_propre(t_pile *pile);
+void	add_back(t_data **data, t_data *new);
 void	ft_error(char *str);
 t_data	*free_data(t_data *data);
 t_data	*free_at(t_data *data, int pos);
 t_data	*get_pos(t_data *data, int pos);
-int		get_val_at(t_data *data, int pos);
+t_data	*lst_last(t_data *data);
+void	set_position(t_data *data);
 
 // -_-_-_-_-_-  FT_LIST -_-_-_-_-_- 
 t_data	*add_at(t_data *data, int nb, int pos);
-void	add_front(t_data **lst, t_data *new);
 t_data	*free_last(t_data *data);
 void	print_list(t_data *data);
 t_data	*create_cell(int nbr);

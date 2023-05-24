@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:15:39 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/24 16:07:21 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/24 16:46:38 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,9 @@ int	main(int argc, char *argv[])
 		return (ft_error("bad list :c"), free(pile), 0);
 	if (!ft_parse(argv, pile))
 	{
-		free_data(pile->a);
-		free(pile);
+		mr_propre(pile);
 		return (0);
 	}
-	ft_printf("len: %d\n", pile->len);
 	print_list(pile->a);
 	if (argc <= 4)
 		smoll_sort(pile);

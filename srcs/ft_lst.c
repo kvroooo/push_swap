@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:38:10 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/24 14:19:50 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/24 16:28:41 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,6 @@ t_data	*create_cell(int nbr)
 	tmp->index = 0;
 	tmp->next = NULL;
 	return (tmp);
-}
-
-void	add_front(t_data **lst, t_data *new)
-{
-	new->next = *lst;
-	*lst = new;
 }
 
 //add at position, data

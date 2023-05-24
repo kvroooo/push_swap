@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:42:02 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/24 14:43:39 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:08:27 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ft_sa(t_data *data)
 	tmp = data->nbr;
 	data->nbr = data->next->nbr;
 	data->next->nbr = tmp;
+	set_position(data);
 	ft_printf("sa\n");
 	return ;
 }
@@ -43,5 +44,6 @@ void	ft_rra(t_data **data)
 	prelast->next = NULL;
 	tmp->next = *data;
 	*data = tmp;
+	set_position(*data);
 	ft_printf("rra\n");
 }

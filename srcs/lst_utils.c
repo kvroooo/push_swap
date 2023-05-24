@@ -6,11 +6,28 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:33:48 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/24 14:29:04 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/24 16:48:10 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+// t_data	*lst_last(t_data *data)
+// {
+// 	if (!data)
+// 		return (NULL);
+// 	if (!(data->next))
+// 		return (data);
+// 	return (ft_lstlast(data)->next);
+// }
+
+// void	add_back(t_data **data, t_data *new)
+// {
+// 	if (!(*data))
+// 		*data = new;
+// 	else
+// 		ft_lstlast(*data)->next = new;
+// }
 
 //On se pose sur l'avant dernier element de la liste
 //On save l'element suivant pour le free a la fin
@@ -69,36 +86,4 @@ t_data	*free_data(t_data *data)
 		data = tmp;
 	}
 	return (data);
-}
-
-t_data	*get_pos(t_data *data, int pos)
-{
-	int		i;
-	t_data	*tmp;
-
-	i = 0;
-	if (!data)
-		return (NULL);
-	tmp = data;
-	while (tmp && i < pos)
-	{
-		tmp = tmp->next;
-		i++;
-	}
-	return (tmp);
-}
-
-int	get_val_at(t_data *data, int pos)
-{
-	int		i;
-	t_data	*tmp;
-
-	i = 0;
-	tmp = data;
-	while (tmp && i < pos)
-	{
-		tmp = tmp->next;
-		i++;
-	}
-	return (tmp->nbr);
 }
