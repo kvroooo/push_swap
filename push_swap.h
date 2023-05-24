@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:40:06 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/24 14:41:47 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/24 15:55:26 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ t_data	*l_add_data(t_data *data, int nb);
 
 // -_-_-_-_-_-  PARSING -_-_-_-_-_- 
 int		ft_check(char **argv, t_pile *pile);
-void	ft_parse(char **arg, t_pile *pile);
+int		ft_parse(char **arg, t_pile *pile);
 int		ft_occ(int nb, t_data *data);
 
 // -_-_-_-_-_-  SORT -_-_-_-_-_- 

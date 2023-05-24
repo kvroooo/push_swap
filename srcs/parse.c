@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:36:25 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/16 13:54:47 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/24 16:06:01 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 //parse argv 
 //transform each element of argv into int
 //assign it to pile->a
-void	ft_parse(char **arg, t_pile *pile)
+int	ft_parse(char **arg, t_pile *pile)
 {
 	int		i;
 	int		j;
@@ -26,18 +26,21 @@ void	ft_parse(char **arg, t_pile *pile)
 	while (arg[i])
 	{
 		nbr = ft_atoi(arg[i]);
-		if (ft_occ(nbr, pile->a))
-			return ;
+		if (ft_occ(nbr, pile->a) == 1)
+		{
+			printf("BYE !\n");
+			return (0);
+		}
 		pile->a = add_at(pile->a, nbr, j);
 		if (!pile->a)
 		{
 			free_data(pile->a);
-			return ;
+			return (0);
 		}
 		i++;
 		j++;
 	}
-	return ;
+	return (1);
 }
 
 int	ft_occ(int nb, t_data *data)
