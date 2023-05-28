@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:36:25 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/24 17:05:28 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/26 15:57:26 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int	ft_parse(char **arg, t_pile *pile)
 		j++;
 	}
 	set_position(pile->a);
+	set_index(pile->a);
 	return (1);
 }
 

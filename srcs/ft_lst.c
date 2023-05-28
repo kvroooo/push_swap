@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:38:10 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/24 16:28:41 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/26 16:11:41 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_data	*create_cell(int nbr)
 	}
 	tmp->nbr = nbr;
 	tmp->pos = 0;
-	tmp->index = 0;
+	tmp->index = 1;
 	tmp->next = NULL;
 	return (tmp);
 }
