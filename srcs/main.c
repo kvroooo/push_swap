@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:15:39 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/26 16:00:06 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/28 14:11:08 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 int	main(int argc, char *argv[])
 {
 	t_pile	*pile;
+	t_data	*pile_b;
 
 	if (argc < 2)
 		return (ft_error("no list"), 0);

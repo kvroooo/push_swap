@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:49:05 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/26 16:14:56 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/28 13:11:25 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	smoll_sort(t_pile *pile)
 	while (!is_sorted(pile->a))
 	{
 		if (pile->a->nbr > pile->a->next->nbr)
-			ft_sa(pile->a);
+			ft_sa(&pile->a);
 		else
 			ft_rra(&pile->a);
 		print_list(pile->a);

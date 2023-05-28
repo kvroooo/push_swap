@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 13:17:10 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/26 16:20:07 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/28 12:52:03 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,3 @@ void	print_list(t_data *data)
 	ft_printf("%p", data);
 	ft_printf("\n");
 }
-

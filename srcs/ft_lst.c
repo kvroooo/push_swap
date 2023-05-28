@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:38:10 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/26 16:11:41 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/28 15:14:31 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,13 @@ t_pile	*l_new_pil(void)
 	new->a = NULL;
 	new->b = NULL;
 	return (new);
+}
+
+t_pile	*lstlast(t_data *pile)
+{
+	if (!pile)
+		return (NULL);
+	if (!(pile->next))
+		return (pile);
+	return (lstlast(pile->next));
 }
