@@ -6,7 +6,7 @@
 #    By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/07 16:39:50 by kuro              #+#    #+#              #
-#    Updated: 2023/05/15 17:20:36 by smlamali         ###   ########.fr        #
+#    Updated: 2023/05/29 14:54:23 by smlamali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,3 +50,12 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+# verif norminette
+norm:
+	@ clear
+	@ if ! norminette | grep "Error"; then echo "\033[32mOK!\033[0m"; fi
+
+mr_propre:
+	@ make -s
+	@ make clean -s

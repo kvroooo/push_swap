@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:40:06 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/28 15:18:22 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/29 14:44:55 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ t_data	*add_at(t_data *data, int nb, int pos);
 t_data	*create_cell(int nbr);
 t_pile	*l_new_pil(void);
 t_data	*l_add_data(t_data *data, int nb);
-t_pile	*lstlast(t_data *pile);
+t_data	*lstlast(t_data *pile);
 
 // -_-_-_-_-_-  LST_UTILS -_-_-_-_-_- 
 t_data	*free_data(t_data *data);
@@ -71,5 +71,7 @@ void	smoll_sort(t_pile *pile);
 // -_-_-_-_-_- INSTRUCTIONS  -_-_-_-_-_-
 void	ft_sa(t_data **data);
 void	ft_rra(t_data **data);
+void	ft_pb(t_pile *pile);
+void	ft_pa(t_pile *pile);
 
 #endif

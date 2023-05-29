@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:38:10 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/28 15:14:31 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/29 12:40:03 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ t_pile	*l_new_pil(void)
 	return (new);
 }
 
-t_pile	*lstlast(t_data *pile)
+t_data	*lstlast(t_data *pile)
 {
 	if (!pile)
 		return (NULL);

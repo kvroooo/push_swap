@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:15:39 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/28 14:11:08 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/29 15:03:07 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 int	main(int argc, char *argv[])
 {
 	t_pile	*pile;
-	t_data	*pile_b;
 
 	if (argc < 2)
 		return (ft_error("no list"), 0);
@@ -30,9 +29,13 @@ int	main(int argc, char *argv[])
 		mr_propre(pile);
 		return (0);
 	}
+	ft_printf("pile A : ");
 	print_list(pile->a);
 	if (argc <= 4)
 		smoll_sort(pile);
+	if (argc >= 4 && argc <= 6)
+		sort_five(pile);
+	ft_printf("pile A : ");
 	print_list(pile->a);
 	ft_printf("------ END ------\n");
 	mr_propre(pile);

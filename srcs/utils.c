@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 13:17:10 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/28 12:52:03 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/29 14:32:28 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void	set_index(t_data *data)
 void	mr_propre(t_pile *pile)
 {
 	free_data(pile->a);
+	free_data(pile->b);
 	free(pile);
 }
 

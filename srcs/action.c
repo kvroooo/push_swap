@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:42:02 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/28 15:52:32 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/29 14:20:28 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,20 +50,52 @@ void	ft_rra(t_data **data)
 
 void	ft_pb(t_pile *pile)
 {
-	t_data	*tmp;
 	t_data	*elmt;
+	t_data	*tmp;
 
+	tmp = pile->a;
+	elmt = pile->b;
 	if (!(pile->a))
 		return ;
 	if (!pile->b)
 	{
-		pile->b = pile->a;
-		pile->b->next = NULL;
+		elmt = tmp;
+		pile->a = pile->a->next;
+		elmt->next = NULL;
+		pile->b = elmt;
+		ft_printf("pb\n");
 		return ;
 	}
 	elmt = pile->a;
-	tmp = lst_last(pile->b);
-	elmt->next = NULL;
-	pile->b = tmp;
+	pile->a = pile->a->next;
+	elmt->next = pile->b;
+	pile->b = elmt;
+	ft_printf("pb\n");
+	return ;
+}
+
+void	ft_pa(t_pile *pile)
+{
+	t_data	*elmt;
+	t_data	*tmp;
+
+	tmp = pile->b;
+	elmt = pile->a;
+	if (!(pile->b))
+		return ;
+	if (!pile->a)
+	{
+		elmt = tmp;
+		pile->b = pile->b->next;
+		elmt->next = NULL;
+		pile->a = elmt;
+		ft_printf("pa\n");
+		return ;
+	}
+	elmt = pile->b;
+	pile->b = pile->b->next;
+	elmt->next = pile->a;
+	pile->a = elmt;
+	ft_printf("pa\n");
 	return ;
 }
