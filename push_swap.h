@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:40:06 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/29 14:44:55 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/29 18:17:45 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,8 @@ void	set_position(t_data *data);
 void	set_index(t_data *data);
 void	print_list(t_data *data);
 
-// -_-_-_-_-_-  FT_LIST -_-_-_-_-_- 
+// -_-_-_-_-_-  FT_LIST -_-_-_-_-_-
+void	add_back(t_data **data, t_data *elmt);
 t_data	*add_at(t_data *data, int nb, int pos);
 t_data	*create_cell(int nbr);
 t_pile	*l_new_pil(void);
@@ -67,6 +68,7 @@ int		ft_occ(int nb, t_data *data);
 // -_-_-_-_-_-  SORT -_-_-_-_-_- 
 int		is_sorted(t_data *data);
 void	smoll_sort(t_pile *pile);
+void	sort_five(t_pile *pile);
 
 // -_-_-_-_-_- INSTRUCTIONS  -_-_-_-_-_-
 void	ft_sa(t_data **data);

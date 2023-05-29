@@ -6,45 +6,11 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:33:48 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/28 15:17:34 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/29 18:02:43 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
-// t_data	*lst_last(t_data *data)
-// {
-// 	if (!data)
-// 		return (NULL);
-// 	if (!(data->next))
-// 		return (data);
-// 	return (ft_lstlast(data)->next);
-// }
-
-// void	add_back(t_data **data, t_data *new)
-// {
-// 	if (!(*data))
-// 		*data = new;
-// 	else
-// 		ft_lstlast(*data)->next = new;
-// }
-
-//On se pose sur l'avant dernier element de la liste
-//On save l'element suivant pour le free a la fin
-//Pointe avant dernier element vers NULL !!1! 
-/*t_data	*free_last(t_data *data)
-{
-	t_data	*tmp;
-	t_data	*last;
-
-	tmp = data;
-	while (tmp && tmp->next->next)
-		tmp = tmp->next;
-	last = tmp->next;
-	tmp->next = NULL;
-	free(last);
-	return (data);
-}*/
 
 t_data	*free_at(t_data *data, int pos)
 {

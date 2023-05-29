@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:38:10 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/29 12:40:03 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/29 18:08:57 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 
 //create cell
 // and insert nb
+
+void	add_back(t_data **data, t_data *elmt)
+{
+	if (!(*data))
+		*data = elmt;
+	else
+		lst_last(*data)->next = elmt;
+	return ;
+}
+
 t_data	*create_cell(int nbr)
 {
 	t_data	*tmp;

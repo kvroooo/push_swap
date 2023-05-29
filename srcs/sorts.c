@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:49:05 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/29 15:19:31 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/29 18:18:12 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,20 @@ void	smoll_sort(t_pile *pile)
 
 void	sort_five(t_pile *pile)
 {
+	int		pos;
 	t_data	*list;
+	t_data	*tmp;
 
 	list = pile->a;
-	while (list->index != 1)
-		list = list->next;
-	//deplacer elemt a index=1 en position 0;
+	tmp = pile->a;
+	pos = 0;
+	while (tmp->index != 1)
+		tmp = tmp->next;
+	if (tmp->pos >= (pile->len / 2) + 1)
+	{
+		while (tmp->pos != 1)
+			ft_rra(&pile);
+	}
 	if (!is_sorted(pile->a))
 		ft_pb(pile);
 	else
