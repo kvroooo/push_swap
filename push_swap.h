@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:40:06 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/30 13:45:15 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/30 17:21:24 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ t_data	*free_data(t_data *data);
 t_data	*free_at(t_data *data, int pos);
 t_data	*get_pos(t_data *data, int pos);
 void	add_back(t_data **data, t_data *new);
+void	set_len(t_pile *pile);
 
 // -_-_-_-_-_-  PARSING -_-_-_-_-_- 
 int		ft_check(char **argv, t_pile *pile);

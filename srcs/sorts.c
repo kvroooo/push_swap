@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:49:05 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/30 15:47:33 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/30 17:28:31 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,16 @@ void	smoll_sort(t_pile *pile)
 }
 
 //put the smaller element at the top of the pile
-void	up_smoll(t_pile *pile)
+void	up_smoll(t_pile *pile, int index)
 {
 	t_data	*tmp;
 
 	tmp = pile->a;
-	while (tmp && tmp->index != 1)
+	while (tmp && tmp->index != index)
 		tmp = tmp->next;
-	while (pile->a->index != 1)
+	while (pile->a->index != index)
 	{
-		if (tmp->pos >= (pile->len / 2) + 1)
+		if (tmp->pos >= (pile->len_a / 2) + 1)
 			ft_rra(&pile->a);
 		else
 			ft_ra(&pile->a);
@@ -66,23 +66,28 @@ void	up_smoll(t_pile *pile)
 //sort 4 and 5
 void	sort_five(t_pile *pile)
 {
-	printf("len_a : %d, len_b : %d\n", pile->len_a, pile->len_b);
+	int	i;
+
+	i = 1;
+	printf("len_a : %d, len : %d\n", pile->len_a, pile->len);
 	if (is_sorted(pile->a))
 		return ;
 	if (is_sorted(pile->a->next))
 		ft_sa(&pile->a);
 	while (pile->len_a != 3)
 	{
-		up_smoll(pile);
+		up_smoll(pile, i);
 		if (!is_sorted(pile->a))
 			ft_pb(pile);
-		printf("len_a : %d, len_b : %d\n", pile->len_a, pile->len_b);
+		printf("len_a : %d, len: %d\n", pile->len_a, pile->len);
 		ft_printf("A : ");
 		print_list(pile->a);
 		ft_printf("B : ");
 		print_list(pile->b);
+		i++;
 	}
 	smoll_sort(pile);
+	ft_pa(pile);
 	ft_pa(pile);
 	return ;
 }
