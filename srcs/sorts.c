@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:49:05 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/29 18:18:12 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/30 14:41:10 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,28 +42,33 @@ void	smoll_sort(t_pile *pile)
 	return ;
 }
 
-void	sort_five(t_pile *pile)
+//put the smaller element at the top of the pile
+void	up_smoll(t_pile *pile)
 {
-	int		pos;
-	t_data	*list;
 	t_data	*tmp;
 
-	list = pile->a;
 	tmp = pile->a;
-	pos = 0;
-	while (tmp->index != 1)
+	while (tmp && tmp->index != 1)
 		tmp = tmp->next;
-	if (tmp->pos >= (pile->len / 2) + 1)
+	while (pile->a->index != 1)
 	{
-		while (tmp->pos != 1)
-			ft_rra(&pile);
+		if (tmp->pos >= (pile->len / 2) + 1)
+			ft_rra(&pile->a);
+		else
+			ft_ra(&pile->a);
 	}
+	return ;
+}
+
+void	sort_five(t_pile *pile)
+{
+	if (is_sorted(pile->a))
+	{
+		ft_printf("sorted !\n");
+		return ;
+	}
+	up_smoll(pile);
 	if (!is_sorted(pile->a))
 		ft_pb(pile);
-	else
-		return ;
-	while (!is_sorted(list))
-		smoll_sort(pile);
-	ft_pa(pile);
 	return ;
 }

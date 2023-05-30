@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:40:06 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/29 18:17:45 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/30 13:45:15 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ t_data	*lstlast(t_data *pile);
 t_data	*free_data(t_data *data);
 t_data	*free_at(t_data *data, int pos);
 t_data	*get_pos(t_data *data, int pos);
-t_data	*lst_last(t_data *data);
 void	add_back(t_data **data, t_data *new);
 
 // -_-_-_-_-_-  PARSING -_-_-_-_-_- 
@@ -75,5 +74,6 @@ void	ft_sa(t_data **data);
 void	ft_rra(t_data **data);
 void	ft_pb(t_pile *pile);
 void	ft_pa(t_pile *pile);
+void	ft_ra(t_data **data);
 
 #endif
