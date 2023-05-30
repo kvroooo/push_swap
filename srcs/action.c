@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:42:02 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/30 14:55:35 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/30 15:48:49 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,8 @@ void	ft_pb(t_pile *pile)
 	pile->a = pile->a->next;
 	elmt->next = pile->b;
 	pile->b = elmt;
+	pile->len_a = pile->len - 1;
+	pile->len_b += 1;
 	ft_printf("pb\n");
 	return ;
 }

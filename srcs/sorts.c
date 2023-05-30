@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:49:05 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/30 14:58:59 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/30 15:47:33 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,10 @@ int	is_sorted(t_data *data)
 void	smoll_sort(t_pile *pile)
 {
 	if (is_sorted(pile->a))
+	{
 		ft_printf("sorted !\n");
+		return ;
+	}
 	while (!is_sorted(pile->a))
 	{
 		if (pile->a->nbr > pile->a->next->nbr)
@@ -60,18 +63,25 @@ void	up_smoll(t_pile *pile)
 	return ;
 }
 
+//sort 4 and 5
 void	sort_five(t_pile *pile)
 {
+	printf("len_a : %d, len_b : %d\n", pile->len_a, pile->len_b);
 	if (is_sorted(pile->a))
-	{
-		ft_printf("sorted !\n");
 		return ;
-	}
 	if (is_sorted(pile->a->next))
 		ft_sa(&pile->a);
-	up_smoll(pile);
-	if (!is_sorted(pile->a))
-		ft_pb(pile);
+	while (pile->len_a != 3)
+	{
+		up_smoll(pile);
+		if (!is_sorted(pile->a))
+			ft_pb(pile);
+		printf("len_a : %d, len_b : %d\n", pile->len_a, pile->len_b);
+		ft_printf("A : ");
+		print_list(pile->a);
+		ft_printf("B : ");
+		print_list(pile->b);
+	}
 	smoll_sort(pile);
 	ft_pa(pile);
 	return ;

@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:15:39 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/30 14:41:50 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/30 15:20:21 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(int argc, char *argv[])
 	print_list(pile->a);
 	if (argc <= 4)
 		smoll_sort(pile);
-	if (argc == 5)
+	if (argc > 4 && argc <= 6)
 		sort_five(pile);
 	ft_printf("pile A : ");
 	print_list(pile->a);
