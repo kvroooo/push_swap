@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:49:05 by smlamali          #+#    #+#             */
-/*   Updated: 2023/05/30 17:28:31 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/05/31 14:22:38 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ void	up_smoll(t_pile *pile, int index)
 	t_data	*tmp;
 
 	tmp = pile->a;
+	if (is_sorted(pile->a))
+		return ;
 	while (tmp && tmp->index != index)
 		tmp = tmp->next;
 	while (pile->a->index != index)
@@ -74,7 +76,7 @@ void	sort_five(t_pile *pile)
 		return ;
 	if (is_sorted(pile->a->next))
 		ft_sa(&pile->a);
-	while (pile->len_a != 3)
+	while (pile->len_a >= 3 && i < 3)
 	{
 		up_smoll(pile, i);
 		if (!is_sorted(pile->a))
