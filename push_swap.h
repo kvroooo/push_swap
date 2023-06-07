@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:40:06 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/30 17:21:24 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/06/07 16:13:31 by kuro             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,10 @@ int		ft_occ(int nb, t_data *data);
 int		is_sorted(t_data *data);
 void	smoll_sort(t_pile *pile);
 void	sort_five(t_pile *pile);
+void	sort_ten(t_pile *pile);
+void	up_smoll(t_data *pile);
+t_data  *search_smoll(t_data *pile);
+int 	lstlen(t_data *pile);
 
 // -_-_-_-_-_- INSTRUCTIONS  -_-_-_-_-_-
 void	ft_sa(t_data **data);

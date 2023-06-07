@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 18:15:39 by kuro              #+#    #+#             */
-/*   Updated: 2023/05/30 15:20:21 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/06/07 15:41:11 by kuro             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,12 @@ int	main(int argc, char *argv[])
 	if (argc > 4 && argc <= 6)
 		sort_five(pile);
 	ft_printf("pile A : ");
-	print_list(pile->a);
-	ft_printf("pile B : ");
-	print_list(pile->b);
+	if (argc == 11)
+		sort_ten(pile);
+	// ft_printf("pile A : ");
+	// print_list(pile->a);
+	// ft_printf("pile B : ");
+	// print_list(pile->b);
 	ft_printf("------ END ------\n");
 	mr_propre(pile);
 }
