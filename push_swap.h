@@ -6,7 +6,7 @@
 /*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:40:06 by kuro              #+#    #+#             */
-/*   Updated: 2023/06/07 16:13:31 by kuro             ###   ########.fr       */
+/*   Updated: 2023/06/08 16:45:58 by kuro             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int		is_sorted(t_data *data);
 void	smoll_sort(t_pile *pile);
 void	sort_five(t_pile *pile);
 void	sort_ten(t_pile *pile);
-void	up_smoll(t_data *pile);
+void	up_smoll(t_data **pile);
 t_data  *search_smoll(t_data *pile);
 int 	lstlen(t_data *pile);
 

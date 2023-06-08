@@ -6,7 +6,7 @@
 /*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:49:05 by smlamali          #+#    #+#             */
-/*   Updated: 2023/06/07 16:17:09 by kuro             ###   ########.fr       */
+/*   Updated: 2023/06/08 17:08:10 by kuro             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,11 @@ void	sort_five(t_pile *pile)
 		ft_sa(&pile->a);
 	while (pile->len_a > 3)
 	{
-		up_smoll(pile->a);
-		if (!is_sorted(pile->a))
-			ft_pb(pile);
+		up_smoll(&pile->a);
 		ft_printf("A : ");
 		print_list(pile->a);
+		if (!is_sorted(pile->a))
+			ft_pb(pile);
 		ft_printf("B : ");
 		print_list(pile->b);
 	}
@@ -75,17 +75,18 @@ void	sort_ten(t_pile *pile)
 	i = 1;
 	while (i <= 5)
 	{
-		up_smoll(pile);
+		up_smoll(&pile->a);
 		if (!is_sorted(pile->a))
 			ft_pb(pile);
+		ft_printf("pile A : ");
+		print_list(pile->a);
+		ft_printf("pile B : ");
+		print_list(pile->b);
 		i++;
 	}
 	sort_five(pile);
-	ft_printf("pile A : ");
-	print_list(pile->a);
-	ft_printf("pile B : ");
-	print_list(pile->b);
-	sort_five(pile);
+	while (pile->b)
+		ft_pa(pile);
 	return;
 }
 

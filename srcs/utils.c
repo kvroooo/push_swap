@@ -6,7 +6,7 @@
 /*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 13:17:10 by smlamali          #+#    #+#             */
-/*   Updated: 2023/06/06 16:23:00 by kuro             ###   ########.fr       */
+/*   Updated: 2023/06/08 16:40:36 by kuro             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	print_list(t_data *data)
 {
 	while (data)
 	{
-		ft_printf("[%d,%d]->", data->index, data->nbr);
+		ft_printf("[%d]->", data->nbr);
 		data = data->next;
 	}
 	ft_printf("%p", data);

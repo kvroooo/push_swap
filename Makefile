@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+         #
+#    By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/07 16:39:50 by kuro              #+#    #+#              #
-#    Updated: 2023/05/29 14:54:23 by smlamali         ###   ########.fr        #
+#    Updated: 2023/06/08 15:58:33 by kuro             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ SRCS =		srcs/main.c 		\
 			srcs/ft_lst.c 		\
 			srcs/sorts.c 		\
 			srcs/action.c 		\
+			srcs/sorts_util.c 							\
 			printf/ft_printf.c 							\
 			printf/ft_putadd.c 							\
 			printf/ft_putchar.c							\

@@ -6,7 +6,7 @@
 /*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 15:45:19 by kuro              #+#    #+#             */
-/*   Updated: 2023/06/07 16:13:17 by kuro             ###   ########.fr       */
+/*   Updated: 2023/06/08 16:51:13 by kuro             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,21 +49,23 @@ t_data  *search_smoll(t_data *pile)
 }
 
 //put the 'index' element at the top of the pile
-void	up_smoll(t_data *pile)
+void	up_smoll(t_data **pile)
 {
-
+    t_data  *tmp;
     t_data  *smoll;
     int     len;
 
-    smoll = search_smoll(pile);
-    len = lstlen(pile);
-	while (pile->index != smoll->index)
+    tmp = *pile;
+    smoll = search_smoll(*pile);
+    len = lstlen(*pile);
+    printf("\n nb = %d pos = %d, len = %d\n", smoll->nbr, smoll->pos, len);
+	while (tmp->index != smoll->index)
 	{
         if (smoll->pos >= (len / 2) + 1)
-            ft_rra(&pile);
+            ft_rra(&tmp);
         else
-            ft_ra(&pile);
+            ft_ra(&tmp);
     }
-	printf("\nindex = %d\n", smoll->index);
+    *pile = tmp;
 	return ;
 }
