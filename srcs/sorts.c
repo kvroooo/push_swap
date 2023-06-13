@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorts.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:49:05 by smlamali          #+#    #+#             */
-/*   Updated: 2023/06/08 17:08:10 by kuro             ###   ########.fr       */
+/*   Updated: 2023/06/13 15:14:58 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,7 @@ int	is_sorted(t_data *data)
 void	smoll_sort(t_pile *pile)
 {
 	if (is_sorted(pile->a))
-	{
-		ft_printf("sorted !\n");
 		return ;
-	}
 	while (!is_sorted(pile->a))
 	{
 		if (pile->a->nbr > pile->a->next->nbr)
@@ -55,12 +52,8 @@ void	sort_five(t_pile *pile)
 	while (pile->len_a > 3)
 	{
 		up_smoll(&pile->a);
-		ft_printf("A : ");
-		print_list(pile->a);
 		if (!is_sorted(pile->a))
 			ft_pb(pile);
-		ft_printf("B : ");
-		print_list(pile->b);
 	}
 	smoll_sort(pile);
 	ft_pa(pile);
@@ -71,23 +64,19 @@ void	sort_five(t_pile *pile)
 void	sort_ten(t_pile *pile)
 {
 	int		i;
-	
+
 	i = 1;
 	while (i <= 5)
 	{
 		up_smoll(&pile->a);
 		if (!is_sorted(pile->a))
 			ft_pb(pile);
-		ft_printf("pile A : ");
-		print_list(pile->a);
-		ft_printf("pile B : ");
-		print_list(pile->b);
 		i++;
 	}
 	sort_five(pile);
 	while (pile->b)
 		ft_pa(pile);
-	return;
+	return ;
 }
 
 // void	up_smoll(t_pile	*pile, int index)
@@ -96,7 +85,7 @@ void	sort_ten(t_pile *pile)
 // 	t_data	*tmp;
 
 // 	tmp = pile;
-	
+
 // 	if (is_sorted(pile->a))
 // 		return ;
 // 	while (tmp && tmp->index != index)
